@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "revision": 1,
+  "models": [
+    {
+      "id": "whisper-base-q5_1",
+      "tier": "fast",
+      "engine": "whisper.cpp",
+      "format": "ggml",
+      "version": "1.0",
+      "sizeBytes": 59707625,
+      "sha256": "422f1ae452ade6f30a004d7e5c6a43195e4433bc370bf23fac9cc591f01a8898",
+      "source": { "type": "asset", "location": "models/ggml-base-q5_1.bin" },
+      "minRamMb": 1500,
+      "multilingual": true,
+      "license": "MIT",
+      "minAppVersion": 1
+    },
+    {
+      "id": "whisper-small-q5_1",
+      "tier": "better",
+      "engine": "whisper.cpp",
+      "format": "ggml",
+      "version": "1.0",
+      "sizeBytes": 190085487,
+      "sha256": "ae85e4a935d7a567bd102fe55afc16bb595bdb618e11b2fc7591bc08120411bb",
+      "source": {
+        "type": "https",
+        "location": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-small-q5_1.bin"
+      },
+      "minRamMb": 3500,
+      "multilingual": true,
+      "license": "MIT",
+      "minAppVersion": 1
+    },
+    {
+      "id": "whisper-large-v3-turbo-q5_0",
+      "tier": "best",
+      "engine": "whisper.cpp",
+      "format": "ggml",
+      "version": "1.0",
+      "sizeBytes": 574041195,
+      "sha256": "394221709cd5ad1f40c46e6031ca61bce88931e6e088c188294c6d5a55ffa7e2",
+      "source": {
+        "type": "https",
+        "location": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-large-v3-turbo-q5_0.bin"
+      },
+      "minRamMb": 7000,
+      "multilingual": true,
+      "license": "MIT",
+      "minAppVersion": 1
+    }
+  ],
+  "languages": [
+    {
+      "id": "ur-en",
+      "name": "Urdu + English, mixed",
+      "nativeName": "اردو + English",
+      "speechLanguage": "ur",
+      "initialPrompt": "جی، کل meeting ہے۔ آپ file اور report ساتھ لے آئیں، باقی details میں message کر دوں گا۔",
+      "script": "Arab",
+      "rtl": true,
+      "minTier": "fast",
+      "conversions": ["roman-urdu"]
+    },
+    {
+      "id": "auto",
+      "name": "Auto-detect",
+      "nativeName": "",
+      "speechLanguage": "auto",
+      "script": "",
+      "rtl": false,
+      "minTier": "fast",
+      "conversions": ["roman-urdu"]
+    },
+    {
+      "id": "ur",
+      "name": "Urdu",
+      "nativeName": "اردو",
+      "speechLanguage": "ur",
+      "script": "Arab",
+      "rtl": true,
+      "minTier": "fast",
+      "conversions": ["roman-urdu"]
+    },
+    {
+      "id": "en",
+      "name": "English",
+      "nativeName": "English",
+      "speechLanguage": "en",
+      "script": "Latn",
+      "rtl": false,
+      "minTier": "fast",
+      "conversions": []
+    },
+    { "id": "pa", "name": "Punjabi", "nativeName": "پنجابی", "speechLanguage": "pa", "script": "Arab", "rtl": true, "minTier": "better", "conversions": [] },
+    { "id": "ps", "name": "Pashto", "nativeName": "پښتو", "speechLanguage": "ps", "script": "Arab", "rtl": true, "minTier": "better", "conversions": [] },
+    { "id": "sd", "name": "Sindhi", "nativeName": "سنڌي", "speechLanguage": "sd", "script": "Arab", "rtl": true, "minTier": "better", "conversions": [] },
+    { "id": "ar", "name": "Arabic", "nativeName": "العربية", "speechLanguage": "ar", "script": "Arab", "rtl": true, "minTier": "better", "conversions": [] },
+    { "id": "fa", "name": "Persian", "nativeName": "فارسی", "speechLanguage": "fa", "script": "Arab", "rtl": true, "minTier": "better", "conversions": [] },
+    { "id": "hi", "name": "Hindi", "nativeName": "हिन्दी", "speechLanguage": "hi", "script": "Deva", "rtl": false, "minTier": "better", "conversions": [] },
+    { "id": "bn", "name": "Bengali", "nativeName": "বাংলা", "speechLanguage": "bn", "script": "Beng", "rtl": false, "minTier": "better", "conversions": [] },
+    { "id": "tr", "name": "Turkish", "nativeName": "Türkçe", "speechLanguage": "tr", "script": "Latn", "rtl": false, "minTier": "better", "conversions": [] }
+  ],
+  "conversions": [
+    {
+      "id": "roman-urdu",
+      "kind": "transliteration",
+      "name": "Roman Urdu converter",
+      "fromScript": "Arab",
+      "toScript": "Latn",
+      "version": "1.0",
+      "source": { "type": "asset", "location": "conversions/roman_urdu.json" }
+    }
+  ]
+}

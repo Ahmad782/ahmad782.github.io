@@ -50,7 +50,18 @@
 </ul>
 <p>Voice messages often contain other people's voices and personal details. HearLess does not access your messaging apps: it only receives the specific files you choose to share with it or pick yourself.</p>
 
+<h2 id="live">Live capture (optional)</h2>
+<p>Live capture writes down audio as it plays in other apps. It is off until you start it, and Android asks you to confirm every time before capture begins and shows an indicator while it is on.</p>
+<ul>
+<li>It captures the audio that other apps play through Android's playback capture feature. It does not record your screen and never opens the microphone.</li>
+<li>Phone calls and internet calls are not captured, and apps can block their audio from being captured.</li>
+<li>The captured audio is turned into text on your phone. The audio and the text are saved in the app's private storage, listed in History, and are never uploaded.</li>
+<li>You choose which apps it listens to, you can stop it at any time from the notification, and you can switch the feature off in its settings.</li>
+</ul>
+<p>Audio played on your phone can include other people's voices. Please only capture audio you are allowed to.</p>
+
 <h2 id="models">Speech model downloads</h2>
+<p>At launch the app also fetches a small list of available speech models from <code>ahmad782.github.io</code>. That request contains no personal details.</p>
 <p>The app includes one speech model. If you choose to download a larger one, the file is fetched from Hugging Face (huggingface.co) over an encrypted connection and checked against a known checksum before use. This request contains no audio, transcripts or personal details; as with any download, the server sees your IP address. See the <a href="https://huggingface.co/privacy">Hugging Face privacy policy</a>.</p>
 
 <h2 id="ads">Advertising</h2>
@@ -73,9 +84,10 @@
 <ul>
 <li><strong>Internet and network state:</strong> optional model downloads and ads.</li>
 <li><strong>Notifications:</strong> progress of a transcription or download, and a notice when a transcript is ready. Optional.</li>
-<li><strong>Foreground service:</strong> lets a long transcription or download finish while the app is not on screen.</li>
+<li><strong>Foreground service:</strong> lets a long transcription or download finish while the app is not on screen, and keeps Live capture running while you use it.</li>
+<li><strong>Record audio:</strong> requested only if you start Live capture. Android requires this permission for capturing audio played by other apps. HearLess does not listen through the microphone.</li>
 </ul>
-<p>HearLess does not request the microphone, contacts, location, storage or accessibility permissions.</p>
+<p>HearLess does not request contacts, location, storage or accessibility permissions.</p>
 
 <h2 id="sharing">Sharing and selling</h2>
 <p>We do not receive your audio or transcripts, so we cannot share or sell them. We do not sell personal information for money. Data collected by Google AdMob for advertising may count as "sharing" or "selling" under some US state laws; you can opt out through the ad privacy options described above.</p>
