@@ -29,12 +29,12 @@
 <body>
 <main>
 <h1>Privacy Policy for Mikao Apps</h1>
-<p class="date">Effective date: October 8, 2026</p>
+<p class="date">Effective date: October 14, 2026 (previous version: October 8, 2026)</p>
 
 <p>This privacy policy applies to all mobile apps published by <strong>Mikao</strong> on Google Play (together, the "Apps"). It explains what information the Apps use, why, who it is shared with, and the choices and rights you have, including under the EU and UK General Data Protection Regulation (GDPR) and US state privacy laws such as the California Consumer Privacy Act (CCPA/CPRA). If an App has its own privacy policy, that policy adds app-specific details to this one.</p>
 
 <div class="card">
-<strong>The short version:</strong> the content you create or open in our Apps (files, documents, photos, notes, records) stays on your device unless an App clearly tells you a feature uses the internet or you choose to share it. Our free Apps show ads from Google AdMob and may use Google Analytics for Firebase and Crashlytics. These Google services collect limited device and usage data. We do not sell your personal information for money, and in the EEA, UK and Switzerland we ask for your consent before personalized ads are shown.
+<strong>The short version:</strong> the content you create or open in our Apps (files, documents, photos, notes, records) stays on your device unless an App clearly tells you a feature uses the internet or you choose to share it. Our free Apps show ads from Google AdMob, use Google Analytics for Firebase to see which features are used, and check Google Play for updates. These Google services collect limited device and usage data. Two Apps have online features that send only what the feature needs: <a href="#govtjobs">Govt Jobs PK</a> (job listings and ad scanning) and <a href="#carrom">Carrom Pakistan</a> (online matches, chat and voice chat). We do not sell your personal information for money, and in the EEA, UK and Switzerland we ask for your consent before personalized ads are shown.
 </div>
 
 <h2 id="who">Who we are</h2>
@@ -42,23 +42,65 @@
 
 <h2 id="collect">Information we collect and how we use it</h2>
 <h3>Content you create or open</h3>
-<p>Files, scans, photos, documents and other content you use in an App are processed on your device. We do not upload them to our servers. Some Apps download on-device models or language packs from Google; those downloads do not send your content.</p>
+<p>Files, scans, photos, documents and other content you use in an App are processed on your device. We do not upload them to our servers, except where the <a href="#apps">App-specific details</a> below say otherwise. Some Apps download on-device models or language packs from Google; those downloads do not send your content.</p>
 
 <h3>Information you give us</h3>
-<p>If you email us, we receive your email address and the message, and use them only to reply. If an App offers an account or cloud sync, it says so in the App and in its own policy, and that data is used only to provide that feature.</p>
+<p>If you email us, we receive your email address and the message, and use them only to reply. If an App offers an account, online play or cloud sync, it says so in the App and in the <a href="#apps">App-specific details</a> below, and that data is used only to provide that feature.</p>
 
 <h3>Information collected automatically by third-party services</h3>
 <div class="scroll"><table>
 <tr><th>Service</th><th>Data it may collect</th><th>Purpose</th></tr>
 <tr><td>Google AdMob</td><td>Advertising ID, app set ID, IP address (approximate location), device and app information, ad interactions, diagnostics</td><td>Showing, limiting and measuring ads; fraud prevention; personalized ads where permitted</td></tr>
-<tr><td>Google Analytics for Firebase</td><td>App-instance ID, screens and features used, device model, OS and app version, approximate country/region</td><td>Understanding which features are used so we can improve the Apps</td></tr>
+<tr><td>Google Analytics for Firebase</td><td>App-instance ID, advertising ID where available, screens viewed and features used (for example a search you run or a filter you pick), app opens and session length, device model, OS and app version, approximate country/region derived from the IP address</td><td>Understanding which features are used so we can improve the Apps</td></tr>
 <tr><td>Firebase Crashlytics (some Apps)</td><td>Crash logs, device state, app-instance ID</td><td>Finding and fixing crashes</td></tr>
-<tr><td>Google Play services</td><td>As described by Google</td><td>In-app updates, in-app purchases, reviews</td></tr>
+<tr><td>Firebase Cloud Messaging (Carrom Pakistan)</td><td>A notification token for your app installation and the app version</td><td>Delivering the notifications you allow, such as friend invites and "your turn"</td></tr>
+<tr><td>Google Play services and Play in-app updates</td><td>The App's package name and installed version, as described by Google</td><td>Checking Google Play for a newer version and installing it when you agree; in-app purchases and reviews where an App offers them</td></tr>
 </table></div>
-<p>We do not collect your name, contacts, precise location, or the content of your files for advertising or analytics. Google processes this data under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; see also <a href="https://policies.google.com/technologies/partner-sites">how Google uses data from apps that use its services</a>. Ads may come from Google and from certified ad partners listed by Google: <a href="https://support.google.com/admob/answer/9012903">Google ad technology providers</a>.</p>
+<p>We do not collect your contacts, precise location, or the content of your files, and we never use your player name, messages or voice for advertising or analytics. Google processes this data under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; see also <a href="https://policies.google.com/technologies/partner-sites">how Google uses data from apps that use its services</a>. Ads may come from Google and from certified ad partners listed by Google: <a href="https://support.google.com/admob/answer/9012903">Google ad technology providers</a>.</p>
 
 <h3>Purchases</h3>
 <p>In-app purchases and subscriptions are handled by Google Play. We receive only a purchase confirmation, never your card or payment details.</p>
+
+
+<h2 id="apps">App-specific details</h2>
+<p>Everything above applies to every App. The sections below add what is particular to each one. HearLess and VaultPDF have their own policies: <a href="https://ahmad782.github.io/hearless-privacy/">HearLess privacy policy</a> and <a href="https://ahmad782.github.io/VaultPDF/">VaultPDF privacy policy</a>.</p>
+
+<h3 id="govtjobs">Govt Jobs PK</h3>
+<ul>
+<li><strong>Job listings:</strong> the App downloads job ads from our job server (hosted on Cloudflare). To show the right jobs, its requests include the province and education level you picked and any search words you type. These requests are not linked to your name or an account; our server uses them to answer and does not keep a per-user record.</li>
+<li><strong>Your preferences:</strong> your province, education level, saved jobs and alerts are stored on your device. Province and education level are also sent to Google Analytics as summary properties, and searches as search events, so we can see which regions and job types people need.</li>
+<li><strong>Scan a newspaper ad (optional):</strong> the photo is read on your device with Google ML Kit. Only the recognised text is sent to our server to find the posts and last date in it; it is processed for that answer and not stored. The photo itself is never uploaded.</li>
+<li><strong>Job alerts:</strong> the App checks our server for new jobs in the background and shows a notification on your device. No notification token is sent to us.</li>
+</ul>
+
+<h3 id="carrom">Carrom Pakistan</h3>
+<ul>
+<li><strong>Offline play</strong> (practice, AI and local 2-player matches) needs no account and sends nothing beyond the ads and analytics data described above.</li>
+<li><strong>Guest account for online play:</strong> when you first play online, the App creates an anonymous guest account (a random account ID and a recovery code) on our game server, hosted by Supabase. You choose a player name; we never ask for your email, phone number or password.</li>
+<li><strong>Game data:</strong> your player name, rating, wins, losses, streaks, in-game coins, friends list, friend requests and match history are stored on the game server so matchmaking, leaderboards and friends work. Other players can see your player name, rating and leaderboard position. Moves made during a match are relayed to your opponent; detailed per-shot logs are deleted 14 days after a match ends. Reports you send about another player are kept to deal with cheating and abuse.</li>
+<li><strong>Chat:</strong> messages you type in a match are relayed live to your opponent and are not saved on our server.</li>
+<li><strong>Voice chat (optional):</strong> the microphone is used only if you allow it and switch voice chat on in an online match. Your voice is streamed live to your opponent through LiveKit and is never recorded or stored.</li>
+<li><strong>Notifications:</strong> if you allow notifications, your device's notification token is stored with your account so we can tell you about friend invites and turns. Tokens unused for 180 days are deleted automatically.</li>
+<li><strong>Delete your account:</strong> in the App go to Settings &rarr; <em>Delete my account and data</em>. It takes effect immediately. If you have uninstalled the App, see <a href="https://ahmad782.github.io/carrom/account-deletion.html">how to request deletion</a>.</li>
+</ul>
+
+<h3 id="rickshawrush">Rickshaw Rush</h3>
+<ul>
+<li>Your progress, garage, missions and settings are stored on your device only. There is no account and no game server.</li>
+<li>The App shows ads (AdMob), including optional rewarded ads you choose to watch, and sends gameplay events such as rides started and finished to Google Analytics so we can balance the game.</li>
+</ul>
+
+<h3 id="convertly">Convertly</h3>
+<ul>
+<li>Every conversion, compression and edit runs on your device. Your images and PDFs are never uploaded; the App opens only the files you pick.</li>
+<li>The App shows ads (AdMob) and sends feature-usage events (for example which tool was used) to Google Analytics. File names and contents are never sent.</li>
+</ul>
+
+<h3 id="filerescue">FileRescue</h3>
+<ul>
+<li>Scanning, recovery and repair run entirely on your device. Your photos, videos and files are never uploaded.</li>
+<li>The App shows ads (AdMob) and sends feature-usage events (for example that a scan finished and how many items were found) to Google Analytics. File names and contents are never sent.</li>
+</ul>
 
 <h2 id="consent">Ads consent and your privacy choices</h2>
 <p>Our Apps use Google's User Messaging Platform (a certified consent management platform) to manage consent.</p>
@@ -73,23 +115,23 @@
 <ul>
 <li><strong>Consent</strong> for personalized advertising and for storing or accessing information on your device for ads. You can withdraw consent at any time in <em>Privacy options</em>; this does not affect processing that happened before.</li>
 <li><strong>Legitimate interests</strong> for non-personalized ads that fund free Apps, ad fraud prevention, security, crash reporting and aggregated analytics to improve the Apps.</li>
-<li><strong>Performance of a contract</strong> for providing in-app purchases and features you request.</li>
+<li><strong>Performance of a contract</strong> for providing in-app purchases and features you request, such as job listings, online matches, chat, voice chat and notifications.</li>
 <li><strong>Legal obligation</strong> where the law requires us to keep or disclose information.</li>
 </ul>
 <h3>Your rights</h3>
-<p>You have the right to access, correct, delete, restrict or object to processing of your personal data, the right to data portability, and the right to withdraw consent. You can also lodge a complaint with your local data protection authority. Because the Apps do not use accounts, data held by Google is linked to device identifiers rather than your name; we will help you with any request, and you can also reset your advertising ID or uninstall the App to stop collection.</p>
+<p>You have the right to access, correct, delete, restrict or object to processing of your personal data, the right to data portability, and the right to withdraw consent. You can also lodge a complaint with your local data protection authority. Apart from the Carrom Pakistan guest account, the Apps do not use accounts, so data held by Google is linked to device identifiers rather than your name; we will help you with any request, and you can also reset your advertising ID or uninstall the App to stop collection.</p>
 <h3>International transfers</h3>
 <p>Google may process data outside your country, including in the United States. Such transfers are protected by safeguards such as the EU-U.S. Data Privacy Framework and Standard Contractual Clauses used by Google.</p>
 
 <h2 id="us">US state privacy rights (California and other states)</h2>
 <p>This section applies to residents of California, Virginia, Colorado, Connecticut, Utah, Texas, Oregon and other US states with comprehensive privacy laws.</p>
 <ul>
-<li><strong>Categories collected (last 12 months):</strong> identifiers (advertising ID, app-instance ID, IP address); internet or other electronic network activity (app and ad interactions); approximate geolocation derived from IP address; device information.</li>
-<li><strong>Sources:</strong> your device, through the Apps and the Google services listed above.</li>
-<li><strong>Purposes:</strong> showing and measuring ads, analytics, security, fraud prevention and fixing bugs.</li>
-<li><strong>Disclosure:</strong> to Google and its ad partners as described above. Allowing personalized advertising may count as "selling" or "sharing" personal information for cross-context behavioral advertising under some state laws. We do not sell personal information for money.</li>
+<li><strong>Categories collected (last 12 months):</strong> identifiers (advertising ID, app-instance ID, IP address, and for Carrom Pakistan online play a guest account ID, player name and notification token); internet or other electronic network activity (app and ad interactions, in-app searches); approximate geolocation derived from the IP address, and the province you choose in Govt Jobs PK; the education level you choose in Govt Jobs PK; game activity, chat and voice for Carrom Pakistan online matches (chat and voice are relayed live, not stored); device information.</li>
+<li><strong>Sources:</strong> your device, through the Apps, our servers and the services listed above.</li>
+<li><strong>Purposes:</strong> providing the features you use, showing and measuring ads, analytics, security, fraud prevention and fixing bugs.</li>
+<li><strong>Disclosure:</strong> to Google and its ad partners as described above, and to the service providers that host our online features (Cloudflare, Supabase, LiveKit), which process data only on our behalf. Allowing personalized advertising may count as "selling" or "sharing" personal information for cross-context behavioral advertising under some state laws. We do not sell personal information for money.</li>
 <li><strong>Sensitive personal information:</strong> we do not collect it for advertising or use it to infer characteristics about you.</li>
-<li><strong>Retention:</strong> Google retains ad and analytics data according to its own retention settings (Firebase Analytics data is kept for up to 14 months). Emails you send us are kept only as long as needed to answer you.</li>
+<li><strong>Retention:</strong> Google retains ad and analytics data according to its own retention settings (Firebase Analytics data is kept for up to 14 months). Carrom Pakistan account data is kept until you delete your account, and per-shot match logs for 14 days. Emails you send us are kept only as long as needed to answer you.</li>
 </ul>
 <h3>Your rights</h3>
 <p>You have the right to know and access the personal information collected about you, to delete it, to correct it, to opt out of its sale or sharing and of targeted advertising, to limit use of sensitive personal information, and not to be discriminated against for exercising these rights. To opt out, use <em>Privacy options</em> in the App or the Android ads setting above. For other requests, email <a href="mailto:hclodhran1@gmail.com">hclodhran1@gmail.com</a>; we may ask for information to verify the request (such as your app-instance ID), and you may use an authorized agent. If we deny your request, you can appeal by replying to our answer with "Appeal" in the subject.</p>
@@ -98,10 +140,10 @@
 <p>Our Apps are not directed at children under 13 (or under 16 in the EEA and UK). We do not knowingly collect personal information from children. If you believe a child has provided us personal information, contact us and we will delete it.</p>
 
 <h2 id="security">Data security</h2>
-<p>Data sent by the Apps' third-party services is encrypted in transit using TLS. No method of transmission or storage is 100% secure, but we choose established providers and keep data collection to a minimum.</p>
+<p>Data sent by the Apps, our servers and third-party services is encrypted in transit using TLS. No method of transmission or storage is 100% secure, but we choose established providers and keep data collection to a minimum.</p>
 
 <h2 id="delete">Deleting your data</h2>
-<p>Uninstalling an App removes its local data from your device and stops all collection by that App. Resetting or deleting your advertising ID breaks the link to ad data collected before. You can also email us to request deletion of any data associated with your app installation.</p>
+<p>Uninstalling an App removes its local data from your device and stops all collection by that App. Resetting or deleting your advertising ID breaks the link to ad data collected before. You can also email us at <a href="mailto:hclodhran1@gmail.com">hclodhran1@gmail.com</a> to request deletion of any data associated with your app installation; we answer within 30 days. Carrom Pakistan players can delete their account and game data instantly in Settings &rarr; <em>Delete my account and data</em> (<a href="https://ahmad782.github.io/carrom/account-deletion.html">details</a>).</p>
 
 <h2 id="changes">Changes to this policy</h2>
 <p>We may update this policy from time to time. The effective date above shows when it was last changed. Significant changes will be noted in the Apps or their store listings.</p>
