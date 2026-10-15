@@ -29,12 +29,12 @@
 <body>
 <main>
 <h1>HearLess Privacy Policy</h1>
-<p class="date">Effective date: October 12, 2026</p>
+<p class="date">Effective date: October 15, 2026</p>
 
 <p>This policy covers <strong>HearLess: Voice to Text</strong> (package <code>com.mikao.hearless</code>), an Android app published by <strong>Mikao</strong>. HearLess turns voice messages and audio recordings into text. It adds app-specific detail to the <a href="https://ahmad782.github.io/privacy/">Mikao Apps Privacy Policy</a>, which also applies.</p>
 
 <div class="card">
-<strong>The short version:</strong> speech recognition runs on your phone. Your audio and your transcripts are never uploaded to us or to anyone else, and the app has no accounts. The app is free and shows ads from Google AdMob, which collects limited device and usage data. Ads never receive your audio or transcripts.
+<strong>The short version:</strong> speech recognition runs on your phone. Your audio and your transcripts are never uploaded to us or to anyone else, and the app has no accounts. The app is free and shows ads from Google AdMob, which collects limited device and usage data. Unless you switch it off, the app also sends anonymous usage counts to Google Analytics. Neither ever receives your audio or transcripts.
 </div>
 
 <h2 id="who">Who we are</h2>
@@ -64,6 +64,20 @@
 <p>At launch the app also fetches a small list of available speech models from <code>ahmad782.github.io</code>. That request contains no personal details.</p>
 <p>The app includes one speech model. If you choose to download a larger one, the file is fetched from Hugging Face (huggingface.co) over an encrypted connection and checked against a known checksum before use. This request contains no audio, transcripts or personal details; as with any download, the server sees your IP address. See the <a href="https://huggingface.co/privacy">Hugging Face privacy policy</a>.</p>
 
+<h2 id="analytics">Usage statistics</h2>
+<p>To learn which features are used and how quickly phones process audio, HearLess sends anonymous usage counts to Google Analytics for Firebase. These are tied to a random app-instance ID, not to your name or account, and include:</p>
+<ul>
+<li>which screens are opened and which buttons are used (for example copy, share, Roman Urdu);</li>
+<li>the spoken language and speech model chosen;</li>
+<li>how long a recording was, how long it took to process, and whether it succeeded;</li>
+<li>model downloads and Live capture sessions started or saved (not which apps were captured);</li>
+<li>device model, Android version, app version and approximate country, which Google Analytics records automatically.</li>
+</ul>
+<p>Your audio, transcripts, file names and contacts are never sent. Advertising ID collection and ad personalization signals are switched off for Analytics. You can stop usage statistics at any time with <em>Share anonymous usage counts</em> under Languages in the app. Google processes this data under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and keeps it for up to 14 months.</p>
+
+<h2 id="updates">App updates</h2>
+<p>When the app starts it asks Google Play whether a newer version is available, using Play's in-app update service. No personal data is sent by HearLess for this.</p>
+
 <h2 id="ads">Advertising</h2>
 <p>HearLess shows banner ads through Google AdMob. To show, limit and measure ads and to prevent fraud, Google may collect:</p>
 <div class="scroll"><table>
@@ -73,7 +87,7 @@
 <tr><td>Ad interactions and app activity related to ads</td><td>Advertising, analytics, fraud prevention</td></tr>
 <tr><td>Diagnostics (for example ad load performance)</td><td>Analytics</td></tr>
 </table></div>
-<p>Google processes this data under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; see <a href="https://policies.google.com/technologies/partner-sites">how Google uses data from apps that use its services</a> and the list of <a href="https://support.google.com/admob/answer/9012903">Google ad technology providers</a>. HearLess does not use any other advertising or analytics service.</p>
+<p>Google processes this data under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; see <a href="https://policies.google.com/technologies/partner-sites">how Google uses data from apps that use its services</a> and the list of <a href="https://support.google.com/admob/answer/9012903">Google ad technology providers</a>. Apart from Google Analytics for Firebase described above, HearLess does not use any other advertising or analytics service.</p>
 <h3>Your advertising choices</h3>
 <ul>
 <li>In the EEA, UK and Switzerland the app asks for your consent before personalized ads are shown. You can change your choice at any time under Languages &gt; Ad privacy options in the app.</li>
