@@ -29,12 +29,12 @@
 <body>
 <main>
 <h1>HearLess Privacy Policy</h1>
-<p class="date">Effective date: October 15, 2026</p>
+<p class="date">Effective date: October 18, 2026</p>
 
 <p>This policy covers <strong>HearLess: Voice to Text</strong> (package <code>com.mikao.hearless</code>), an Android app published by <strong>Mikao</strong>. HearLess turns voice messages and audio recordings into text. It adds app-specific detail to the <a href="https://ahmad782.github.io/privacy/">Mikao Apps Privacy Policy</a>, which also applies.</p>
 
 <div class="card">
-<strong>The short version:</strong> speech recognition runs on your phone. Your audio and your transcripts are never uploaded to us or to anyone else, and the app has no accounts. The app is free and shows ads from Google AdMob, which collects limited device and usage data. Unless you switch it off, the app also sends anonymous usage counts to Google Analytics. Neither ever receives your audio or transcripts.
+<strong>The short version:</strong> with online transcription on (the default), each voice note is sent securely to our transcription service, written down by a large speech model and sent straight back. We do not keep the audio or the text, and our speech providers do not use it to train AI. Switch online transcription off and speech recognition happens only on your phone. Transcripts are stored only on your phone, and the app has no accounts. The app is free and shows ads from Google AdMob, which collects limited device and usage data. Unless you switch it off, the app also sends anonymous usage counts to Google Analytics. Neither ever receives your audio or transcripts.
 </div>
 
 <h2 id="who">Who we are</h2>
@@ -42,7 +42,9 @@
 
 <h2 id="audio">Your audio and transcripts</h2>
 <ul>
-<li><strong>Processed on your device.</strong> When you share or choose an audio file, HearLess converts the speech to text using a speech model stored on your phone. No audio and no text is sent to a server for this.</li>
+<li><strong>Online transcription (on by default).</strong> When you tap Transcribe, HearLess sends the audio, in pieces of up to 30 seconds, over an encrypted connection to the HearLess transcription service (a Cloudflare Worker run by us). The service passes it to a speech provider, <a href="https://groq.com/privacy-policy/">Groq</a> or <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Workers AI</a>, which runs OpenAI's Whisper model and returns the text. The audio and the text are held only in memory for that request: our service does not store or log them, and the providers process them only to produce the transcript, not to train AI. The app asks you before the first time it does this.</li>
+<li><strong>What the service keeps.</strong> Only a count of how many seconds of audio each installation used today, under a random installation ID created by the app (not linked to your name, phone number or advertising ID), so that free daily limits can be applied. These counts are kept for up to 30 days.</li>
+<li><strong>Fully on your device, if you prefer.</strong> Switch off <em>Online transcription</em> under Languages (or on the screen before you transcribe) and HearLess converts speech to text with a speech model stored on your phone; no audio or text is sent anywhere for this. Without an internet connection the phone does the work automatically. Live capture always runs on the phone.</li>
 <li><strong>A private copy.</strong> HearLess copies the audio you give it into its own private storage so that it can transcribe it and let you replay it next to the text. Other apps cannot read this copy. The original file in the app it came from is not changed.</li>
 <li><strong>Stored only on your phone.</strong> Transcripts, any edits you make, Roman Urdu conversions and English translations are kept in the app's private storage. They are excluded from Android cloud backup and device-to-device transfer.</li>
 <li><strong>You are in control.</strong> You can delete a single transcript, only its audio copy, all audio copies, or everything, from inside the app. Uninstalling the app removes all of it.</li>
@@ -96,7 +98,7 @@
 
 <h2 id="permissions">Permissions</h2>
 <ul>
-<li><strong>Internet and network state:</strong> optional model downloads and ads.</li>
+<li><strong>Internet and network state:</strong> online transcription, optional model downloads, update checks, usage statistics and ads.</li>
 <li><strong>Notifications:</strong> progress of a transcription or download, and a notice when a transcript is ready. Optional.</li>
 <li><strong>Foreground service:</strong> lets a long transcription or download finish while the app is not on screen, and keeps Live capture running while you use it.</li>
 <li><strong>Record audio:</strong> requested only if you start Live capture. Android requires this permission for capturing audio played by other apps. HearLess does not listen through the microphone.</li>
@@ -104,10 +106,10 @@
 <p>HearLess does not request contacts, location, storage or accessibility permissions.</p>
 
 <h2 id="sharing">Sharing and selling</h2>
-<p>We do not receive your audio or transcripts, so we cannot share or sell them. We do not sell personal information for money. Data collected by Google AdMob for advertising may count as "sharing" or "selling" under some US state laws; you can opt out through the ad privacy options described above.</p>
+<p>Audio sent for online transcription is processed by our speech providers (Groq, Cloudflare) on our behalf and for no other purpose; we never sell or share it for advertising, and transcripts are stored only on your phone. We do not sell personal information for money. Data collected by Google AdMob for advertising may count as "sharing" or "selling" under some US state laws; you can opt out through the ad privacy options described above.</p>
 
 <h2 id="rights">Your rights</h2>
-<p>Depending on where you live, you may have the right to access, correct, delete or restrict the use of your personal data, to object, to withdraw consent, and to complain to a data protection authority. Because your audio and transcripts exist only on your device, you exercise these rights over them directly in the app. For data held by Google, use the controls above or contact Google. For anything else, email us.</p>
+<p>Depending on where you live, you may have the right to access, correct, delete or restrict the use of your personal data, to object, to withdraw consent, and to complain to a data protection authority. Because we do not keep your audio or transcripts on our servers, you exercise these rights over them directly in the app, where they are stored. For data held by Google, use the controls above or contact Google. For anything else, email us.</p>
 
 <h2 id="children">Children</h2>
 <p>HearLess is not directed to children under 13 and we do not knowingly collect personal information from them.</p>
